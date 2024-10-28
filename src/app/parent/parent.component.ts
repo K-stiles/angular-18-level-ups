@@ -10,8 +10,14 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent {
   parentVariable = 'Stiles Stilinski is a character in Teen Wolf';
+  childData: number | undefined;
 
   constructor() {
     console.log('ParentComponent constructor');
+  }
+
+  receiveEvent(event: number) {
+    this.childData = event;
+    console.log(event);
   }
 }

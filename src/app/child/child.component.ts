@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -11,7 +11,16 @@ export class ChildComponent {
   @Input()
   childVariable = '';
 
+  userAge = 18;
+
+  @Output() 
+  childEvent = new EventEmitter<number>();
+
   constructor() {
     console.log('ChildComponent constructor');
+  }
+
+  sendEvent() {
+    this.childEvent.emit(this.userAge);
   }
 }

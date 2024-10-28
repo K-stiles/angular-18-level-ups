@@ -1,5 +1,6 @@
 <div>
   <p>Parent Works!</p>
+  <p>Data from child: {{ childData }}</p>
 </div>
 
-<app-child [childVariable]="parentVariable"></app-child>
+<app-child [childVariable]="parentVariable" (childEvent)="receiveEvent($event)"></app-child>
