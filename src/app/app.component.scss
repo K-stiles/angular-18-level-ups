@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: teal;
+  height: 80px;
+  border-bottom: 1px dashed white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a.active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
